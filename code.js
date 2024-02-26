@@ -21,7 +21,7 @@ function dfs(adjList, currentNode, targetNode, path, visited) {
     path.pop();
 }
 
-function graphToAdjList(graph) { //Complexity: |V|+|E|
+function graphToAdjList(graph) { //Complexity: |E|+|E|
     let V = graph[0];
     let E = graph[1];
     let adjList = [];
