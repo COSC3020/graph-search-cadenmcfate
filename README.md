@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/M24O3lId)
 # Search in Graphs
 
 Recall the pseudocode for Depth-First Search:
@@ -29,3 +30,17 @@ answer, including your reasoning, to this markdown file.
 ## Bonus
 
 Implement and analyze breadth-first search.
+
+
+## Answer
+
+Analyzing each function seperately:
+
+The graphToAdjList function contains 3 for loops. 2 of $|E|$ complexity and one of constant complexity, so this function overall has $\Theta(|E|)$ runtime complexity and is only called once.
+
+The depthFirstSearch function has a for loop of $|V|$ complexity and then starts the first call to the dfs function.
+
+The dfs function: In the worst case, this function will lead to every node being visited. It takes constant time to do the other operations for each node. So combining all the recursive calls of dfs gives a complexity of $|V|$ for the dfs function.
+
+Combining these three terms we get $2|V| + |E|$, so this implimentation has a worst-case complexity of $\Theta(|V|+|E|)$.
+
